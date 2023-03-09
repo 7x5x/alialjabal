@@ -1183,32 +1183,41 @@
           </figure>
         </section>
         
-        <section class="contact-form">
-
-          <h3 class="h3 form-title" >Contact Form</h3>
-
-          <form  action="" method="post"  class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text"  id="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email"  id="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea  id="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button  class="form-btn"  onclick="sendMail()" type="button"  disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-
-
        
+                <?php 
+                if(isset($_POST['submit_form'])){
+                  $name=$_POST['fullname'];
+                  $hide=1;
+                }
+                ?>
 
-        </section>
+                <?php if(isset($hide)) { ?>
+                <section class="contact-form">
+
+                    <h3 class="h3 form-title">Contact Form</h3>
+
+                    <form action="" method="post" class="form" data-form>
+
+                        <div class="input-wrapper">
+                            <input type="text" id="fullname" class="form-input" placeholder="Full name" required
+                                data-form-input>
+
+                            <input type="email" id="email" class="form-input" placeholder="Email address" required
+                                data-form-input>
+                        </div>
+
+                        <textarea id="message" class="form-input" placeholder="Your Message" required
+                            data-form-input></textarea>
+
+                        <button name="submit_form" class=" form-btn" onclick="sendMail()" type="button" disabled
+                            data-form-btn>
+                            <ion-icon name="paper-plane"></ion-icon>
+                            <span>Send Message</span>
+                        </button>
+
+                    </form>
+                </section>
+                <?php } ?>
 
       </article>
 
