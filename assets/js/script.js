@@ -179,3 +179,10 @@ function sendMail() {
     }
   ).catch(err => console.log(err))
 }
+
+document.forms['myFirstForm'].addEventListener('submit', function (event) {
+  // Do something with the form's data here
+  this.style['display'] = 'none';
+  event.preventDefault(); /*w  w w.  j av  a2s.c  o  m*/
+  Thanks.style['display'] = 'inline';
+});
