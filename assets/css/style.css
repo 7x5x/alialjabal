@@ -1880,3 +1880,16 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+#Thanks {
+display: none;
+}
+#Thanks P {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffd96f3d;
+  color: white;
+  /* align-content: center; */
+  font-size: x-large;
+  font-weight: 700;
+}
